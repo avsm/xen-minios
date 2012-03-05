@@ -110,7 +110,8 @@ void start_kernel(start_info_t *si)
     /* Init the console driver. */
     init_console();
 
-    /* Call (possibly overridden) app_main() */
+    /* XXX just spin for now */
+    while (1) {};
     app_main(&start_info);
 }
 
