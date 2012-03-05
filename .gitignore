@@ -1,2 +1,4 @@
 include/xen
 *.o
+mini-os
+mini-os.gz
