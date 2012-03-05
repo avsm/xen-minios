@@ -60,7 +60,6 @@ int ffsll (long long int lli)
 #include <mini-os/os.h>
 #include <mini-os/types.h>
 #include <mini-os/lib.h>
-#include <mini-os/xmalloc.h>
 
 int memcmp(const void * cs,const void * ct,size_t count)
 {
@@ -201,15 +200,6 @@ char * strstr(const char * s1,const char * s2)
                 s1++;
         }
         return NULL;
-}
-
-char *strdup(const char *x)
-{
-    int l = strlen(x);
-    char *res = malloc(l + 1);
-	if (!res) return NULL;
-    memcpy(res, x, l + 1);
-    return res;
 }
 
 int ffs(int i)
