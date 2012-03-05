@@ -52,7 +52,6 @@
 #include <stddef.h>
 #include <xen/xen.h>
 #include <xen/event_channel.h>
-#include <sys/queue.h>
 #include "gntmap.h"
 
 #ifdef HAVE_LIBC
