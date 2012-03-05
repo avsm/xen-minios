@@ -35,13 +35,11 @@
  */
  
 #include <mini-os/types.h>
-#include <mini-os/wait.h>
 #include <mini-os/mm.h>
 #include <mini-os/hypervisor.h>
 #include <mini-os/events.h>
 #include <mini-os/os.h>
 #include <mini-os/lib.h>
-#include <mini-os/xenbus.h>
 #include <xen/io/console.h>
 
 

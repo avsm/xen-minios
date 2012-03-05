@@ -34,13 +34,6 @@
 #include <mini-os/time.h>
 #include <mini-os/types.h>
 #include <mini-os/lib.h>
-#include <mini-os/sched.h>
-#include <mini-os/xenbus.h>
-#include <mini-os/gnttab.h>
-#include <mini-os/netfront.h>
-#include <mini-os/blkfront.h>
-#include <mini-os/fbfront.h>
-#include <mini-os/pcifront.h>
 #include <mini-os/xmalloc.h>
 #include <fcntl.h>
 #include <xen/features.h>
@@ -117,20 +110,8 @@ void start_kernel(start_info_t *si)
     /* Init the console driver. */
     init_console();
 
-    /* Init grant tables */
-    init_gnttab();
-    
-    /* Init scheduler. */
-    init_sched();
- 
-    /* Init XenBus */
-    init_xenbus();
-
     /* Call (possibly overridden) app_main() */
     app_main(&start_info);
-
-    /* Everything initialised, start idle thread */
-    run_idle_thread();
 }
 
 void stop_kernel(void)
@@ -138,12 +119,6 @@ void stop_kernel(void)
     /* TODO: fs import */
 
     local_irq_disable();
-
-    /* Reset grant tables */
-    fini_gnttab();
-
-    /* Reset XenBus */
-    fini_xenbus();
 
     /* Reset timers */
     fini_time();
