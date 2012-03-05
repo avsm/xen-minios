@@ -1,7 +1,6 @@
 #ifndef __WAIT_H__
 #define __WAIT_H__
 
-#include <mini-os/sched.h>
 #include <mini-os/os.h>
 #include <mini-os/waittypes.h>
 

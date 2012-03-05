@@ -25,6 +25,8 @@
 #ifndef _MM_H_
 #define _MM_H_
 
+#include <arch_mm.h>
+
 #if defined(__i386__)
 #include <xen/arch-x86_32.h>
 #elif defined(__x86_64__)
@@ -38,7 +40,6 @@
 #include <mini-os/lib.h>
 
 #include <arch_limits.h>
-#include <arch_mm.h>
 
 #define STACK_SIZE_PAGE_ORDER __STACK_SIZE_PAGE_ORDER
 #define STACK_SIZE __STACK_SIZE
