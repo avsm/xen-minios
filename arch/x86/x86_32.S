@@ -1,5 +1,5 @@
 #include <mini-os/os.h>
-#include <mini-os/x86/arch_limits.h>
+#include <x86/arch_limits.h>
 #include <xen/arch-x86_32.h>
 
 .section __xen_guest
